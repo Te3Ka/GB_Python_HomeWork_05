@@ -10,7 +10,6 @@
 Также нельзя использовать циклы.
 
 *Пример:*
-
 input: 2 2
 output: 4 
 '''
@@ -22,3 +21,23 @@ def author():
     print('Илья "Te3K@_PaynE" Новичихин')
     print('79811131773@yandex.ru')
     print('****************************')
+
+# Проверка на введение положительного числа.
+def correct_number(_str):
+    _number = int(input(f"Введите числа {_str} = "))
+    while (_number < 0):
+        _number = int(input("Введено неверное число! Введите заново: "))
+    return _number
+
+def addition(_num1, _num2):
+    if _num2 == 0:
+        return _num1
+    else:
+        return addition(_num1 + 1, _num2 - 1)
+
+print("Программа запрашивает на вход два целых положительных числа A и B")
+print("На выходе показывает сумму введённых чисел.")
+_a = correct_number("A")
+_b = correct_number("B")
+_sum = addition(_a, _b)
+print(f"Сложение чисел {_a} и {_b} = {_sum}")
