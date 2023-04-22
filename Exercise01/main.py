@@ -19,3 +19,21 @@ def author():
     print('Илья "Te3K@_PaynE" Новичихин')
     print('79811131773@yandex.ru')
     print('****************************')
+
+def raise_power(_base, _exp):
+    if _exp == 0:
+        return 1
+    elif _exp == 1:
+        return _base
+    elif _exp > 1:
+        return _base * raise_power(_base, _exp - 1)
+    elif _exp < 0:
+        return 1 / raise_power(_base, _exp * (-1))
+
+print("Программа запрашивает от пользователя два числа A и B")
+print("Число А - это основание степени")
+print("Число B - показатель степени")
+print("На выходе программа показывает число A в степени B")
+_a = int(input("Введите число A = "))
+_b = int(input("Введите число B = "))
+print(f'Число {_a} в степени {_b} = {raise_power(_a, _b)}')
