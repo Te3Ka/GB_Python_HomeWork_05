@@ -41,3 +41,5 @@ _a = correct_number("A")
 _b = correct_number("B")
 _sum = addition(_a, _b)
 print(f"Сложение чисел {_a} и {_b} = {_sum}")
+
+author()
